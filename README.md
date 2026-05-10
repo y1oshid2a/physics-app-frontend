@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Physics App Frontend
 
-## Getting Started
+物理添削AIサービスのフロントエンドです。
 
-First, run the development server:
+## 技術スタック
+
+- **Next.js 16** - Reactフレームワーク
+- **TypeScript** - 型安全な開発
+- **Tailwind CSS** - スタイリング
+- **react-markdown** - Markdownレンダリング
+
+## 画面一覧
+
+| URL | 説明 |
+|------|------|
+| `/` | トップページ |
+| `/login` | ログイン画面 |
+| `/register` | ユーザー登録画面 |
+| `/questions` | 質問一覧画面 |
+| `/questions/new` | 質問投稿画面 |
+
+## セットアップ
+
+### 前提条件
+
+- Node.js 20以上
+- バックエンド（physics-app-backend）が起動していること
+
+### 起動方法
 
 ```bash
+# 依存パッケージをインストール
+npm install
+
+# 開発サーバーを起動
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで `http://localhost:3000` にアクセスしてください。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## バックエンドとの連携
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+バックエンドAPIは `http://localhost:8000` で動作している前提です。
